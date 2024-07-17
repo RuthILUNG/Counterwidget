@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Widget</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div class="widget-container">
+        <h2>Counter Widget</h2>
+        <div x-data="{ count: 1 }">
+          <p x-text="count"></p>
+          <button @click="count++">Count Up</button>
+          <button @click="count > 0 ? count-- : count = 0">Count Down</button>
+        </div>
+  </div>
+</body>
+</html>
